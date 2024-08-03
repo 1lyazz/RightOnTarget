@@ -1,0 +1,16 @@
+PODS:
+  - Feedbacks (0.2.0)
+
+DEPENDENCIES:
+  - Feedbacks
+
+SPEC REPOS:
+  trunk:
+    - Feedbacks
+
+SPEC CHECKSUMS:
+  Feedbacks: 98c119aa000040899a111ca32fdc4348a24c21c5
+
+PODFILE CHECKSUM: 86aad5bc8025e4ac6c8f0d76a58d45a00315e7d3
+
+COCOAPODS: 1.15.2

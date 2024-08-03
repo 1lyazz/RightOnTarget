@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23077.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23068.1"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="fOZ-9t-0OK" customClass="ButtonCell" customModule="RightOnTarget" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="90" height="220"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="MK1-E4-wPA">
+                <rect key="frame" x="0.0" y="0.0" width="90" height="220"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="VDR-76-pfH">
+                        <rect key="frame" x="0.0" y="0.0" width="90" height="220"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J28-X8-OQc">
+                                <rect key="frame" x="0.0" y="0.0" width="90" height="70"/>
+                                <color key="backgroundColor" red="0.1607843041" green="0.35294118520000001" blue="0.38431376220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="PrQ-Lr-ewt"/>
+                                    <constraint firstAttribute="height" constant="70" id="Urs-lH-aPh"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJQ-SD-KzA">
+                                <rect key="frame" x="0.0" y="75" width="90" height="70"/>
+                                <color key="backgroundColor" red="0.1607843041" green="0.35294118520000001" blue="0.38431376220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="0Jz-Uh-xEa"/>
+                                    <constraint firstAttribute="height" constant="70" id="vLb-WQ-t8s"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hu6-8i-s0f">
+                                <rect key="frame" x="0.0" y="150" width="90" height="70"/>
+                                <color key="backgroundColor" red="0.1607843041" green="0.35294118520000001" blue="0.38431376220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="2MM-fV-f0w"/>
+                                    <constraint firstAttribute="height" constant="70" id="sUJ-eW-Esd"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                            </button>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="VDR-76-pfH" firstAttribute="top" secondItem="MK1-E4-wPA" secondAttribute="top" id="Jh9-Sv-Qjt"/>
+                    <constraint firstAttribute="trailing" secondItem="VDR-76-pfH" secondAttribute="trailing" id="Oek-kC-dhx"/>
+                    <constraint firstAttribute="bottom" secondItem="VDR-76-pfH" secondAttribute="bottom" id="X5u-ec-T3V"/>
+                    <constraint firstItem="VDR-76-pfH" firstAttribute="leading" secondItem="MK1-E4-wPA" secondAttribute="leading" id="hd5-1Y-f3n"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="105" height="123"/>
+            <connections>
+                <outlet property="bottomButton" destination="hu6-8i-s0f" id="HUg-NW-9PX"/>
+                <outlet property="topButton" destination="J28-X8-OQc" id="CWu-9h-oQO"/>
+                <outlet property="versButton" destination="OJQ-SD-KzA" id="w0d-nb-tjb"/>
+            </connections>
+            <point key="canvasLocation" x="-247.32824427480915" y="38.028169014084511"/>
+        </collectionViewCell>
+    </objects>
+</document>
