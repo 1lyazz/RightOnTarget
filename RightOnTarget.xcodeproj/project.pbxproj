@@ -177,6 +177,15 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		0A128D232C5E6D9B00C624DC /* Players */ = {
+			isa = PBXGroup;
+			children = (
+				0A9C8C4E2C26DAFE003B0EFC /* Sound.swift */,
+				0A9C8C5E2C26E771003B0EFC /* MusicPlayer.swift */,
+			);
+			path = Players;
+			sourceTree = "<group>";
+		};
 		0A196CA72C5E437100092186 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +217,7 @@
 		0A5650632BF0DFC000231B71 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0A128D232C5E6D9B00C624DC /* Players */,
 				0A1195642C1EF53200AB7B4D /* CardGame */,
 				0A5650642BF0DFF900231B71 /* SliderGame.swift */,
 				0A5F35C02BFB5DBC007FAEC8 /* ColorGame.swift */,
@@ -229,10 +239,10 @@
 			isa = PBXGroup;
 			children = (
 				0A56506A2BF12B8600231B71 /* LaunchScreenVC.swift */,
+				0A8859B92BF8D33D00B0D152 /* CardsGameVC.swift */,
 				0ADC70862BF4E24A005F8D76 /* HomeVC.swift */,
 				0A8859B72BF8D32E00B0D152 /* ColorGameVC.swift */,
 				0AB41A662BEE3A9C00BDDAD0 /* SliderGameVC.swift */,
-				0A8859B92BF8D33D00B0D152 /* CardsGameVC.swift */,
 				0A4971F52BF612CB007D3450 /* CustomAlert.swift */,
 				0AE5B3B82C297FA700AEE596 /* GameInfoVC.swift */,
 				0A355B5A2C2D82FE008BA90B /* LeaderboardVC.swift */,
@@ -254,8 +264,6 @@
 				0A9145F92C35781D006C7CA2 /* leaderboardSound.wav */,
 				0A83DE882C27F8B5007F93CE /* startGame.mp3 */,
 				0A83DE8C2C285C55007F93CE /* startTimer.mp3 */,
-				0A9C8C4E2C26DAFE003B0EFC /* Sound.swift */,
-				0A9C8C5E2C26E771003B0EFC /* MusicPlayer.swift */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
