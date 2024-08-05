@@ -42,6 +42,8 @@ final class HomeVC: UIViewController {
     }
 }
 
+// MARK: Private Methods
+
 private extension HomeVC {
     private func setupStyle() {
         view.backgroundColor = Constants.appDarkGray
