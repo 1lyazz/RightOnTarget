@@ -111,7 +111,6 @@ class CardGameView: UIView {
                                 "Вы набрали \(scoreString) очков \nЗа \(totalTime) секунд ",
                                 "CardsScoreAlertButton")
             
-//            countTimer?.invalidate()
             playSound(sound: "win", type: "mp3")
             
         case .infoAlert:
