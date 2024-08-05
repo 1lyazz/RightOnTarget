@@ -19,7 +19,6 @@
 		0A355B632C2D9A2E008BA90B /* LeaderboardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A355B622C2D9A2E008BA90B /* LeaderboardCell.xib */; };
 		0A4971F62BF612CB007D3450 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4971F52BF612CB007D3450 /* CustomAlert.swift */; };
 		0A5650652BF0DFF900231B71 /* SliderGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5650642BF0DFF900231B71 /* SliderGame.swift */; };
-		0A5650672BF0F10F00231B71 /* LifecycleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5650662BF0F10F00231B71 /* LifecycleVC.swift */; };
 		0A56506B2BF12B8600231B71 /* LaunchScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A56506A2BF12B8600231B71 /* LaunchScreenVC.swift */; };
 		0A5F35C12BFB5DBC007FAEC8 /* ColorGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F35C02BFB5DBC007FAEC8 /* ColorGame.swift */; };
 		0A692B2E2C5FE73100D1E144 /* CardGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A692B2D2C5FE73100D1E144 /* CardGameView.swift */; };
@@ -86,7 +85,6 @@
 		0A355B622C2D9A2E008BA90B /* LeaderboardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeaderboardCell.xib; sourceTree = "<group>"; };
 		0A4971F52BF612CB007D3450 /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
 		0A5650642BF0DFF900231B71 /* SliderGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderGame.swift; sourceTree = "<group>"; };
-		0A5650662BF0F10F00231B71 /* LifecycleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifecycleVC.swift; sourceTree = "<group>"; };
 		0A56506A2BF12B8600231B71 /* LaunchScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenVC.swift; sourceTree = "<group>"; };
 		0A5F35C02BFB5DBC007FAEC8 /* ColorGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGame.swift; sourceTree = "<group>"; };
 		0A692B2D2C5FE73100D1E144 /* CardGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGameView.swift; sourceTree = "<group>"; };
@@ -264,7 +262,6 @@
 				0A8859B92BF8D33D00B0D152 /* CardsGameVC.swift */,
 				0AE5B3B82C297FA700AEE596 /* GameInfoVC.swift */,
 				0A355B5A2C2D82FE008BA90B /* LeaderboardVC.swift */,
-				0A5650662BF0F10F00231B71 /* LifecycleVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -552,7 +549,6 @@
 				0A4971F62BF612CB007D3450 /* CustomAlert.swift in Sources */,
 				0AF030622BFD06BB00BCCED8 /* UIVCExtension.swift in Sources */,
 				0AE5B3B92C297FA700AEE596 /* GameInfoVC.swift in Sources */,
-				0A5650672BF0F10F00231B71 /* LifecycleVC.swift in Sources */,
 				0A11955E2C1EDF7600AB7B4D /* Shapes.swift in Sources */,
 				0A5F35C12BFB5DBC007FAEC8 /* ColorGame.swift in Sources */,
 				0A8859B82BF8D32E00B0D152 /* ColorGameVC.swift in Sources */,

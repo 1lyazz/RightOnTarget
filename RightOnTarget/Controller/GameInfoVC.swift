@@ -4,7 +4,7 @@
 
 import UIKit
 
-class GameInfoVC: UIViewController {
+final class GameInfoVC: UIViewController {
     var cellIcon: UIImage = .hexGameLogo
     
     // MARK: IBOutlets

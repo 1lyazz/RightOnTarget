@@ -4,7 +4,7 @@
 
 import UIKit
 
-class LeaderboardVC: UIViewController {
+final class LeaderboardVC: UIViewController {
     // Dictionary of players and time records
     var players =  [String: Int]()
     var sortedPlayers = [(key: String, value: Int)]()
