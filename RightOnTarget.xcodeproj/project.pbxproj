@@ -28,6 +28,7 @@
 		0A692B382C60C35F00D1E144 /* HomeAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A692B372C60C35F00D1E144 /* HomeAnimationView.swift */; };
 		0A692B3C2C60E12500D1E144 /* ColorGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A692B3B2C60E12500D1E144 /* ColorGameView.swift */; };
 		0A692B3F2C60E2FF00D1E144 /* ColorButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A692B3E2C60E2FF00D1E144 /* ColorButtonsView.swift */; };
+		0A692B442C60F2B000D1E144 /* SliderGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A692B432C60F2B000D1E144 /* SliderGameView.swift */; };
 		0A729A842BFDF649003EE2F2 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A729A832BFDF649003EE2F2 /* UILabelExtension.swift */; };
 		0A83DE892C27F8B5007F93CE /* startGame.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A83DE882C27F8B5007F93CE /* startGame.mp3 */; };
 		0A83DE8D2C285C55007F93CE /* startTimer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A83DE8C2C285C55007F93CE /* startTimer.mp3 */; };
@@ -94,6 +95,7 @@
 		0A692B372C60C35F00D1E144 /* HomeAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAnimationView.swift; sourceTree = "<group>"; };
 		0A692B3B2C60E12500D1E144 /* ColorGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGameView.swift; sourceTree = "<group>"; };
 		0A692B3E2C60E2FF00D1E144 /* ColorButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorButtonsView.swift; sourceTree = "<group>"; };
+		0A692B432C60F2B000D1E144 /* SliderGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderGameView.swift; sourceTree = "<group>"; };
 		0A729A832BFDF649003EE2F2 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		0A83DE882C27F8B5007F93CE /* startGame.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = startGame.mp3; sourceTree = "<group>"; };
 		0A83DE8C2C285C55007F93CE /* startTimer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = startTimer.mp3; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 			children = (
 				0A692B312C60C19F00D1E144 /* Home */,
 				0A692B3D2C60E13400D1E144 /* ColorGame */,
+				0A692B422C60F28F00D1E144 /* SliderGame */,
 				0A11955A2C1EDF1C00AB7B4D /* CardsGame */,
 				0AE5B3BA2C2981D800AEE596 /* Cells */,
 				0A1195592C1EDEF000AB7B4D /* Storyboards */,
@@ -283,6 +286,14 @@
 				0A692B3E2C60E2FF00D1E144 /* ColorButtonsView.swift */,
 			);
 			path = ColorGame;
+			sourceTree = "<group>";
+		};
+		0A692B422C60F28F00D1E144 /* SliderGame */ = {
+			isa = PBXGroup;
+			children = (
+				0A692B432C60F2B000D1E144 /* SliderGameView.swift */,
+			);
+			path = SliderGame;
 			sourceTree = "<group>";
 		};
 		0A9C8C4D2C26DAED003B0EFC /* Audio */ = {
@@ -537,6 +548,7 @@
 				0AF0305E2BFCF54A00BCCED8 /* UIButtonExtension.swift in Sources */,
 				0A692B2E2C5FE73100D1E144 /* CardGameView.swift in Sources */,
 				0AE5B3C42C298CED00AEE596 /* CommonCell.swift in Sources */,
+				0A692B442C60F2B000D1E144 /* SliderGameView.swift in Sources */,
 				0A4971F62BF612CB007D3450 /* CustomAlert.swift in Sources */,
 				0AF030622BFD06BB00BCCED8 /* UIVCExtension.swift in Sources */,
 				0AE5B3B92C297FA700AEE596 /* GameInfoVC.swift in Sources */,
