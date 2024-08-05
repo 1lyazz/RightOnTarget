@@ -22,6 +22,7 @@
 		0A5650672BF0F10F00231B71 /* LifecycleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5650662BF0F10F00231B71 /* LifecycleVC.swift */; };
 		0A56506B2BF12B8600231B71 /* LaunchScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A56506A2BF12B8600231B71 /* LaunchScreenVC.swift */; };
 		0A5F35C12BFB5DBC007FAEC8 /* ColorGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F35C02BFB5DBC007FAEC8 /* ColorGame.swift */; };
+		0A692B2E2C5FE73100D1E144 /* CardGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A692B2D2C5FE73100D1E144 /* CardGameView.swift */; };
 		0A729A842BFDF649003EE2F2 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A729A832BFDF649003EE2F2 /* UILabelExtension.swift */; };
 		0A83DE892C27F8B5007F93CE /* startGame.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A83DE882C27F8B5007F93CE /* startGame.mp3 */; };
 		0A83DE8D2C285C55007F93CE /* startTimer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A83DE8C2C285C55007F93CE /* startTimer.mp3 */; };
@@ -82,6 +83,7 @@
 		0A5650662BF0F10F00231B71 /* LifecycleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifecycleVC.swift; sourceTree = "<group>"; };
 		0A56506A2BF12B8600231B71 /* LaunchScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenVC.swift; sourceTree = "<group>"; };
 		0A5F35C02BFB5DBC007FAEC8 /* ColorGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGame.swift; sourceTree = "<group>"; };
+		0A692B2D2C5FE73100D1E144 /* CardGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGameView.swift; sourceTree = "<group>"; };
 		0A729A832BFDF649003EE2F2 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		0A83DE882C27F8B5007F93CE /* startGame.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = startGame.mp3; sourceTree = "<group>"; };
 		0A83DE8C2C285C55007F93CE /* startTimer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = startTimer.mp3; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 		0A11955A2C1EDF1C00AB7B4D /* CardsGame */ = {
 			isa = PBXGroup;
 			children = (
+				0A692B2D2C5FE73100D1E144 /* CardGameView.swift */,
 				0A11955C2C1EDF4200AB7B4D /* Cards.swift */,
 				0A11955B2C1EDF3D00AB7B4D /* Shapes.swift */,
 			);
@@ -231,6 +234,7 @@
 				0AE5B3BA2C2981D800AEE596 /* Cells */,
 				0A11955A2C1EDF1C00AB7B4D /* CardsGame */,
 				0A1195592C1EDEF000AB7B4D /* Storyboards */,
+				0A4971F52BF612CB007D3450 /* CustomAlert.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -239,11 +243,10 @@
 			isa = PBXGroup;
 			children = (
 				0A56506A2BF12B8600231B71 /* LaunchScreenVC.swift */,
-				0A8859B92BF8D33D00B0D152 /* CardsGameVC.swift */,
 				0ADC70862BF4E24A005F8D76 /* HomeVC.swift */,
 				0A8859B72BF8D32E00B0D152 /* ColorGameVC.swift */,
 				0AB41A662BEE3A9C00BDDAD0 /* SliderGameVC.swift */,
-				0A4971F52BF612CB007D3450 /* CustomAlert.swift */,
+				0A8859B92BF8D33D00B0D152 /* CardsGameVC.swift */,
 				0AE5B3B82C297FA700AEE596 /* GameInfoVC.swift */,
 				0A355B5A2C2D82FE008BA90B /* LeaderboardVC.swift */,
 				0A5650662BF0F10F00231B71 /* LifecycleVC.swift */,
@@ -496,6 +499,7 @@
 				0A1195662C1EF56F00AB7B4D /* Card.swift in Sources */,
 				0AB41A632BEE3A9C00BDDAD0 /* AppDelegate.swift in Sources */,
 				0AF0305E2BFCF54A00BCCED8 /* UIButtonExtension.swift in Sources */,
+				0A692B2E2C5FE73100D1E144 /* CardGameView.swift in Sources */,
 				0AE5B3C42C298CED00AEE596 /* CommonCell.swift in Sources */,
 				0A4971F62BF612CB007D3450 /* CustomAlert.swift in Sources */,
 				0AF030622BFD06BB00BCCED8 /* UIVCExtension.swift in Sources */,
