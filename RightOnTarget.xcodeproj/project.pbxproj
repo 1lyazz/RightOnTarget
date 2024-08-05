@@ -23,6 +23,9 @@
 		0A56506B2BF12B8600231B71 /* LaunchScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A56506A2BF12B8600231B71 /* LaunchScreenVC.swift */; };
 		0A5F35C12BFB5DBC007FAEC8 /* ColorGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F35C02BFB5DBC007FAEC8 /* ColorGame.swift */; };
 		0A692B2E2C5FE73100D1E144 /* CardGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A692B2D2C5FE73100D1E144 /* CardGameView.swift */; };
+		0A692B332C60C1D700D1E144 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A692B322C60C1D700D1E144 /* HomeView.swift */; };
+		0A692B362C60C30900D1E144 /* HomeButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A692B352C60C30900D1E144 /* HomeButtonsView.swift */; };
+		0A692B382C60C35F00D1E144 /* HomeAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A692B372C60C35F00D1E144 /* HomeAnimationView.swift */; };
 		0A729A842BFDF649003EE2F2 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A729A832BFDF649003EE2F2 /* UILabelExtension.swift */; };
 		0A83DE892C27F8B5007F93CE /* startGame.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A83DE882C27F8B5007F93CE /* startGame.mp3 */; };
 		0A83DE8D2C285C55007F93CE /* startTimer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A83DE8C2C285C55007F93CE /* startTimer.mp3 */; };
@@ -84,6 +87,9 @@
 		0A56506A2BF12B8600231B71 /* LaunchScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenVC.swift; sourceTree = "<group>"; };
 		0A5F35C02BFB5DBC007FAEC8 /* ColorGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGame.swift; sourceTree = "<group>"; };
 		0A692B2D2C5FE73100D1E144 /* CardGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGameView.swift; sourceTree = "<group>"; };
+		0A692B322C60C1D700D1E144 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		0A692B352C60C30900D1E144 /* HomeButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButtonsView.swift; sourceTree = "<group>"; };
+		0A692B372C60C35F00D1E144 /* HomeAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAnimationView.swift; sourceTree = "<group>"; };
 		0A729A832BFDF649003EE2F2 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		0A83DE882C27F8B5007F93CE /* startGame.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = startGame.mp3; sourceTree = "<group>"; };
 		0A83DE8C2C285C55007F93CE /* startTimer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = startTimer.mp3; sourceTree = "<group>"; };
@@ -231,8 +237,9 @@
 		0A5650682BF0F36600231B71 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0AE5B3BA2C2981D800AEE596 /* Cells */,
+				0A692B312C60C19F00D1E144 /* Home */,
 				0A11955A2C1EDF1C00AB7B4D /* CardsGame */,
+				0AE5B3BA2C2981D800AEE596 /* Cells */,
 				0A1195592C1EDEF000AB7B4D /* Storyboards */,
 				0A4971F52BF612CB007D3450 /* CustomAlert.swift */,
 			);
@@ -252,6 +259,16 @@
 				0A5650662BF0F10F00231B71 /* LifecycleVC.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		0A692B312C60C19F00D1E144 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0A692B322C60C1D700D1E144 /* HomeView.swift */,
+				0A692B372C60C35F00D1E144 /* HomeAnimationView.swift */,
+				0A692B352C60C30900D1E144 /* HomeButtonsView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		0A9C8C4D2C26DAED003B0EFC /* Audio */ = {
@@ -492,9 +509,12 @@
 				0A8859BA2BF8D33D00B0D152 /* CardsGameVC.swift in Sources */,
 				0A5650652BF0DFF900231B71 /* SliderGame.swift in Sources */,
 				0A355B5D2C2D8A79008BA90B /* Constants.swift in Sources */,
+				0A692B382C60C35F00D1E144 /* HomeAnimationView.swift in Sources */,
 				0ADC70872BF4E24A005F8D76 /* HomeVC.swift in Sources */,
 				0AB41A672BEE3A9C00BDDAD0 /* SliderGameVC.swift in Sources */,
 				0A9C8C4F2C26DAFE003B0EFC /* Sound.swift in Sources */,
+				0A692B332C60C1D700D1E144 /* HomeView.swift in Sources */,
+				0A692B362C60C30900D1E144 /* HomeButtonsView.swift in Sources */,
 				0A729A842BFDF649003EE2F2 /* UILabelExtension.swift in Sources */,
 				0A1195662C1EF56F00AB7B4D /* Card.swift in Sources */,
 				0AB41A632BEE3A9C00BDDAD0 /* AppDelegate.swift in Sources */,

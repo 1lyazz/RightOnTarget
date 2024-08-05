@@ -4,7 +4,7 @@
 
 import UIKit
 
-class LaunchScreenVC: UIViewController {
+final class LaunchScreenVC: UIViewController {
     private let imageView: UIImageView = {
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 337, height: 250))
         imageView.image = UIImage(named: "LaunchScreenLogo")
