@@ -4,6 +4,7 @@
 
 import Feedbacks
 import SnapKit
+import Toast
 import UIKit
 
 final class CardsGameVC: UIViewController {
@@ -235,9 +236,7 @@ private extension CardsGameVC {
                             }
                             
                             // Set data to UserDefaults
-                            UserDefaults.standard.set(self.userName, forKey: "userName")
-                            UserDefaults.standard.set(self.totalTime, forKey: "totalTime")
-                            UserDefaults.standard.synchronize()
+                            self.savePlayerData(userName: self.userName, totalTime: self.totalTime)
                             
                             return
                         }
@@ -257,6 +256,27 @@ private extension CardsGameVC {
         return cardViews
     }
     
+    private func savePlayerData(userName: String, totalTime: Int) {
+        var players = UserDefaults.standard.dictionary(forKey: "players") as? [String: Int] ?? [:]
+        var isNewRecord = false
+        
+        if let existingTime = players[userName] {
+            if totalTime < existingTime {
+                players[userName] = totalTime
+                isNewRecord = true
+            }
+        } else {
+            players[userName] = totalTime
+            isNewRecord = true
+        }
+        
+        UserDefaults.standard.set(players, forKey: "players")
+        
+        if isNewRecord, players.values.min() == totalTime {
+            self.view.makeToast("🏆 NEW RECORD 🏆", duration: 3.0, position: .top)
+        }
+    }
+
     // Place cards on board
     private func placeCardsOnBoard(_ cards: [UIView]) {
         // Delete all cards from game board
@@ -328,7 +348,7 @@ private extension CardsGameVC {
     }
     
     // Starting game timer
-    func startTimer() {
+    private func startTimer() {
         countTimer?.invalidate()
         playSound(sound: "startTimer", type: "mp3")
         totalTime = 0
