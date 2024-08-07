@@ -5,6 +5,7 @@
 import UIKit
 
 final class CardViewFactory {
+    
     func get(_ shape: CardType, withSize size: CGSize, andColor color: CardColor) -> UIView {
         let frame = CGRect(origin: .zero, size: size)
         let viewColor = getViewColorBy(modelColor: color)

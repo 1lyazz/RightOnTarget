@@ -8,6 +8,7 @@ import Foundation
 // Use class here to create a singleton for the music not passing to another view
 
 final class MusicPlayer {
+    
     static let shared = MusicPlayer()
     var audioPlayer: AVAudioPlayer?
 
