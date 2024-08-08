@@ -61,16 +61,16 @@ final class ColorGameView: UIView {
         switch alertType {
         case .scoreAlert:
             let scoreString = String(score ?? 0)
-            alert.alertContent?("Игра окончена",
-                                "Вы заработали \(scoreString) из \(rounds) очков",
+            alert.alertContent?("Finished!",
+                                "You scored \(scoreString) out of \(rounds) points",
                                 "ColorScoreAlertButton")
             
             score == 5 || score == 6 ? playSound(sound: "win", type: "mp3") :
                 MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "gameOver")
 
         case .infoAlert:
-            alert.alertContent?("Правила игры",
-                                "В игре \(rounds) раундов. \n Необходимо угадать цвет по HEX-коду.",
+            alert.alertContent?("Game Rules",
+                                "The game has \(rounds) rounds. \n Your goal is to guess colour using HEX code",
                                 "ColorInfoAlertButton")
             
             MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "info")

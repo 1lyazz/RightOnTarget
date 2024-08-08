@@ -22,6 +22,7 @@ final class SliderGameVC: UIViewController {
     private lazy var roundLabel = sliderGameView.roundLabel
     private lazy var secretNumberLabel = sliderGameView.secretNumberLabel
     private lazy var secretNumberLabel2 = sliderGameView.secretNumberLabel
+    private lazy var alert = sliderGameView.alert
     
     // MARK: - Lifecycle
     

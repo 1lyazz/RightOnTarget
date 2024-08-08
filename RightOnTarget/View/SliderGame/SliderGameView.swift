@@ -67,15 +67,15 @@ final class SliderGameView: UIView {
         switch alertType {
         case .scoreAlert:
             let scoreString = String(score ?? 0)
-            alert.alertContent?("Игра окончена",
-                                "Вы заработали \(scoreString) из \(maxScore) очков",
+            alert.alertContent?("Finished!",
+                                "You scored \(scoreString) out of \(maxScore) points",
                                 "SliderScoreAlertButton")
             
             score ?? 0 >= 200 ? playSound(sound: "win", type: "mp3") :
                 MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "gameOver")
         case .infoAlert:
-            alert.alertContent?("Правила игры",
-                                "В игре \(rounds) раундов. \n Необходимо угадать \n расположение числа на слайдере.",
+            alert.alertContent?("Game Rules",
+                                "The game has \(rounds) rounds. \n Your goal is to guess \n number location on the slider",
                                 "SliderInfoAlertButton")
             
             MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "info")

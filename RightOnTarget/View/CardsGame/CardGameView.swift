@@ -107,15 +107,15 @@ class CardGameView: UIView {
         case .scoreAlert:
             let scoreString = String(score ?? 0)
             let totalTime = String(totalTime ?? 0)
-            alert.alertContent?("Игра окончена",
-                                "Вы набрали \(scoreString) очков \nЗа \(totalTime) секунд ",
+            alert.alertContent?("Finished!",
+                                "You scored \(scoreString) points \nIn \(totalTime) seconds",
                                 "CardsScoreAlertButton")
             
             playSound(sound: "win", type: "mp3")
             
         case .infoAlert:
-            alert.alertContent?("Правила игры",
-                                "Найдите пары карточек", "CardsInfoAlertButton")
+            alert.alertContent?("Game Rules",
+                                "Your goal is to find cards pairs", "CardsInfoAlertButton")
             
             MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "info")
         }
