@@ -13,15 +13,22 @@
 		0A1195662C1EF56F00AB7B4D /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1195632C1EF52A00AB7B4D /* Card.swift */; };
 		0A1195672C1EF58500AB7B4D /* CardGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1195652C1EF55F00AB7B4D /* CardGame.swift */; };
 		0A11956A2C1EF79900AB7B4D /* CardViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1195692C1EF79900AB7B4D /* CardViewFactory.swift */; };
+		0A2D65682C63D7D900472AA0 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 0A2D65672C63D7D900472AA0 /* Toast */; };
 		0A355B5B2C2D82FE008BA90B /* LeaderboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A355B5A2C2D82FE008BA90B /* LeaderboardVC.swift */; };
 		0A355B5D2C2D8A79008BA90B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A355B5C2C2D8A79008BA90B /* Constants.swift */; };
 		0A355B612C2D99F7008BA90B /* LeaderboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A355B602C2D99F7008BA90B /* LeaderboardCell.swift */; };
 		0A355B632C2D9A2E008BA90B /* LeaderboardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A355B622C2D9A2E008BA90B /* LeaderboardCell.xib */; };
 		0A4971F62BF612CB007D3450 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4971F52BF612CB007D3450 /* CustomAlert.swift */; };
 		0A5650652BF0DFF900231B71 /* SliderGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5650642BF0DFF900231B71 /* SliderGame.swift */; };
-		0A5650672BF0F10F00231B71 /* LifecycleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5650662BF0F10F00231B71 /* LifecycleVC.swift */; };
 		0A56506B2BF12B8600231B71 /* LaunchScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A56506A2BF12B8600231B71 /* LaunchScreenVC.swift */; };
 		0A5F35C12BFB5DBC007FAEC8 /* ColorGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F35C02BFB5DBC007FAEC8 /* ColorGame.swift */; };
+		0A692B2E2C5FE73100D1E144 /* CardGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A692B2D2C5FE73100D1E144 /* CardGameView.swift */; };
+		0A692B332C60C1D700D1E144 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A692B322C60C1D700D1E144 /* HomeView.swift */; };
+		0A692B362C60C30900D1E144 /* HomeButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A692B352C60C30900D1E144 /* HomeButtonsView.swift */; };
+		0A692B382C60C35F00D1E144 /* HomeAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A692B372C60C35F00D1E144 /* HomeAnimationView.swift */; };
+		0A692B3C2C60E12500D1E144 /* ColorGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A692B3B2C60E12500D1E144 /* ColorGameView.swift */; };
+		0A692B3F2C60E2FF00D1E144 /* ColorButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A692B3E2C60E2FF00D1E144 /* ColorButtonsView.swift */; };
+		0A692B442C60F2B000D1E144 /* SliderGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A692B432C60F2B000D1E144 /* SliderGameView.swift */; };
 		0A729A842BFDF649003EE2F2 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A729A832BFDF649003EE2F2 /* UILabelExtension.swift */; };
 		0A83DE892C27F8B5007F93CE /* startGame.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A83DE882C27F8B5007F93CE /* startGame.mp3 */; };
 		0A83DE8D2C285C55007F93CE /* startTimer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A83DE8C2C285C55007F93CE /* startTimer.mp3 */; };
@@ -73,15 +80,22 @@
 		0A1195632C1EF52A00AB7B4D /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		0A1195652C1EF55F00AB7B4D /* CardGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGame.swift; sourceTree = "<group>"; };
 		0A1195692C1EF79900AB7B4D /* CardViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewFactory.swift; sourceTree = "<group>"; };
+		0A2D65692C63E92700472AA0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0A355B5A2C2D82FE008BA90B /* LeaderboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardVC.swift; sourceTree = "<group>"; };
 		0A355B5C2C2D8A79008BA90B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0A355B602C2D99F7008BA90B /* LeaderboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardCell.swift; sourceTree = "<group>"; };
 		0A355B622C2D9A2E008BA90B /* LeaderboardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeaderboardCell.xib; sourceTree = "<group>"; };
 		0A4971F52BF612CB007D3450 /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
 		0A5650642BF0DFF900231B71 /* SliderGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderGame.swift; sourceTree = "<group>"; };
-		0A5650662BF0F10F00231B71 /* LifecycleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifecycleVC.swift; sourceTree = "<group>"; };
 		0A56506A2BF12B8600231B71 /* LaunchScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenVC.swift; sourceTree = "<group>"; };
 		0A5F35C02BFB5DBC007FAEC8 /* ColorGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGame.swift; sourceTree = "<group>"; };
+		0A692B2D2C5FE73100D1E144 /* CardGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGameView.swift; sourceTree = "<group>"; };
+		0A692B322C60C1D700D1E144 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		0A692B352C60C30900D1E144 /* HomeButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButtonsView.swift; sourceTree = "<group>"; };
+		0A692B372C60C35F00D1E144 /* HomeAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAnimationView.swift; sourceTree = "<group>"; };
+		0A692B3B2C60E12500D1E144 /* ColorGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGameView.swift; sourceTree = "<group>"; };
+		0A692B3E2C60E2FF00D1E144 /* ColorButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorButtonsView.swift; sourceTree = "<group>"; };
+		0A692B432C60F2B000D1E144 /* SliderGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderGameView.swift; sourceTree = "<group>"; };
 		0A729A832BFDF649003EE2F2 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		0A83DE882C27F8B5007F93CE /* startGame.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = startGame.mp3; sourceTree = "<group>"; };
 		0A83DE8C2C285C55007F93CE /* startTimer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = startTimer.mp3; sourceTree = "<group>"; };
@@ -123,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A2D65682C63D7D900472AA0 /* Toast in Frameworks */,
 				8F788D121E5876BC07089F8D /* Pods_RightOnTarget.framework in Frameworks */,
 				0A1195532C1DC3B200AB7B4D /* SnapKit in Frameworks */,
 			);
@@ -152,6 +167,7 @@
 		0A11955A2C1EDF1C00AB7B4D /* CardsGame */ = {
 			isa = PBXGroup;
 			children = (
+				0A692B2D2C5FE73100D1E144 /* CardGameView.swift */,
 				0A11955C2C1EDF4200AB7B4D /* Cards.swift */,
 				0A11955B2C1EDF3D00AB7B4D /* Shapes.swift */,
 			);
@@ -175,6 +191,15 @@
 				0A355B5C2C2D8A79008BA90B /* Constants.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		0A128D232C5E6D9B00C624DC /* Players */ = {
+			isa = PBXGroup;
+			children = (
+				0A9C8C4E2C26DAFE003B0EFC /* Sound.swift */,
+				0A9C8C5E2C26E771003B0EFC /* MusicPlayer.swift */,
+			);
+			path = Players;
 			sourceTree = "<group>";
 		};
 		0A196CA72C5E437100092186 /* Extensions */ = {
@@ -208,6 +233,7 @@
 		0A5650632BF0DFC000231B71 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0A128D232C5E6D9B00C624DC /* Players */,
 				0A1195642C1EF53200AB7B4D /* CardGame */,
 				0A5650642BF0DFF900231B71 /* SliderGame.swift */,
 				0A5F35C02BFB5DBC007FAEC8 /* ColorGame.swift */,
@@ -218,9 +244,13 @@
 		0A5650682BF0F36600231B71 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0AE5B3BA2C2981D800AEE596 /* Cells */,
+				0A692B312C60C19F00D1E144 /* Home */,
+				0A692B3D2C60E13400D1E144 /* ColorGame */,
+				0A692B422C60F28F00D1E144 /* SliderGame */,
 				0A11955A2C1EDF1C00AB7B4D /* CardsGame */,
+				0AE5B3BA2C2981D800AEE596 /* Cells */,
 				0A1195592C1EDEF000AB7B4D /* Storyboards */,
+				0A4971F52BF612CB007D3450 /* CustomAlert.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -233,12 +263,37 @@
 				0A8859B72BF8D32E00B0D152 /* ColorGameVC.swift */,
 				0AB41A662BEE3A9C00BDDAD0 /* SliderGameVC.swift */,
 				0A8859B92BF8D33D00B0D152 /* CardsGameVC.swift */,
-				0A4971F52BF612CB007D3450 /* CustomAlert.swift */,
 				0AE5B3B82C297FA700AEE596 /* GameInfoVC.swift */,
 				0A355B5A2C2D82FE008BA90B /* LeaderboardVC.swift */,
-				0A5650662BF0F10F00231B71 /* LifecycleVC.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		0A692B312C60C19F00D1E144 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0A692B322C60C1D700D1E144 /* HomeView.swift */,
+				0A692B372C60C35F00D1E144 /* HomeAnimationView.swift */,
+				0A692B352C60C30900D1E144 /* HomeButtonsView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0A692B3D2C60E13400D1E144 /* ColorGame */ = {
+			isa = PBXGroup;
+			children = (
+				0A692B3B2C60E12500D1E144 /* ColorGameView.swift */,
+				0A692B3E2C60E2FF00D1E144 /* ColorButtonsView.swift */,
+			);
+			path = ColorGame;
+			sourceTree = "<group>";
+		};
+		0A692B422C60F28F00D1E144 /* SliderGame */ = {
+			isa = PBXGroup;
+			children = (
+				0A692B432C60F2B000D1E144 /* SliderGameView.swift */,
+			);
+			path = SliderGame;
 			sourceTree = "<group>";
 		};
 		0A9C8C4D2C26DAED003B0EFC /* Audio */ = {
@@ -254,8 +309,6 @@
 				0A9145F92C35781D006C7CA2 /* leaderboardSound.wav */,
 				0A83DE882C27F8B5007F93CE /* startGame.mp3 */,
 				0A83DE8C2C285C55007F93CE /* startTimer.mp3 */,
-				0A9C8C4E2C26DAFE003B0EFC /* Sound.swift */,
-				0A9C8C5E2C26E771003B0EFC /* MusicPlayer.swift */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -263,6 +316,7 @@
 		0AB41A562BEE3A9C00BDDAD0 = {
 			isa = PBXGroup;
 			children = (
+				0A2D65692C63E92700472AA0 /* README.md */,
 				0AB41A612BEE3A9C00BDDAD0 /* RightOnTarget */,
 				0AB41A602BEE3A9C00BDDAD0 /* Products */,
 				FB4CAAE12999A36D5B834C8C /* Pods */,
@@ -358,6 +412,7 @@
 			name = RightOnTarget;
 			packageProductDependencies = (
 				0A1195522C1DC3B200AB7B4D /* SnapKit */,
+				0A2D65672C63D7D900472AA0 /* Toast */,
 			);
 			productName = "Right on target";
 			productReference = 0AB41A5F2BEE3A9C00BDDAD0 /* RightOnTarget.app */;
@@ -389,6 +444,7 @@
 			mainGroup = 0AB41A562BEE3A9C00BDDAD0;
 			packageReferences = (
 				0A1195512C1DC3B200AB7B4D /* XCRemoteSwiftPackageReference "SnapKit" */,
+				0A2D65662C63D7D900472AA0 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
 			);
 			productRefGroup = 0AB41A602BEE3A9C00BDDAD0 /* Products */;
 			projectDirPath = "";
@@ -474,6 +530,8 @@
 			files = (
 				0A355B5B2C2D82FE008BA90B /* LeaderboardVC.swift in Sources */,
 				0A9C8C5F2C26E771003B0EFC /* MusicPlayer.swift in Sources */,
+				0A692B3F2C60E2FF00D1E144 /* ColorButtonsView.swift in Sources */,
+				0A692B3C2C60E12500D1E144 /* ColorGameView.swift in Sources */,
 				0A355B612C2D99F7008BA90B /* LeaderboardCell.swift in Sources */,
 				0A11955D2C1EDF6800AB7B4D /* Cards.swift in Sources */,
 				0A11956A2C1EF79900AB7B4D /* CardViewFactory.swift in Sources */,
@@ -481,18 +539,22 @@
 				0A8859BA2BF8D33D00B0D152 /* CardsGameVC.swift in Sources */,
 				0A5650652BF0DFF900231B71 /* SliderGame.swift in Sources */,
 				0A355B5D2C2D8A79008BA90B /* Constants.swift in Sources */,
+				0A692B382C60C35F00D1E144 /* HomeAnimationView.swift in Sources */,
 				0ADC70872BF4E24A005F8D76 /* HomeVC.swift in Sources */,
 				0AB41A672BEE3A9C00BDDAD0 /* SliderGameVC.swift in Sources */,
 				0A9C8C4F2C26DAFE003B0EFC /* Sound.swift in Sources */,
+				0A692B332C60C1D700D1E144 /* HomeView.swift in Sources */,
+				0A692B362C60C30900D1E144 /* HomeButtonsView.swift in Sources */,
 				0A729A842BFDF649003EE2F2 /* UILabelExtension.swift in Sources */,
 				0A1195662C1EF56F00AB7B4D /* Card.swift in Sources */,
 				0AB41A632BEE3A9C00BDDAD0 /* AppDelegate.swift in Sources */,
 				0AF0305E2BFCF54A00BCCED8 /* UIButtonExtension.swift in Sources */,
+				0A692B2E2C5FE73100D1E144 /* CardGameView.swift in Sources */,
 				0AE5B3C42C298CED00AEE596 /* CommonCell.swift in Sources */,
+				0A692B442C60F2B000D1E144 /* SliderGameView.swift in Sources */,
 				0A4971F62BF612CB007D3450 /* CustomAlert.swift in Sources */,
 				0AF030622BFD06BB00BCCED8 /* UIVCExtension.swift in Sources */,
 				0AE5B3B92C297FA700AEE596 /* GameInfoVC.swift in Sources */,
-				0A5650672BF0F10F00231B71 /* LifecycleVC.swift in Sources */,
 				0A11955E2C1EDF7600AB7B4D /* Shapes.swift in Sources */,
 				0A5F35C12BFB5DBC007FAEC8 /* ColorGame.swift in Sources */,
 				0A8859B82BF8D32E00B0D152 /* ColorGameVC.swift in Sources */,
@@ -753,6 +815,14 @@
 				minimumVersion = 5.7.1;
 			};
 		};
+		0A2D65662C63D7D900472AA0 /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -760,6 +830,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0A1195512C1DC3B200AB7B4D /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		0A2D65672C63D7D900472AA0 /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A2D65662C63D7D900472AA0 /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -6,89 +6,64 @@ import Feedbacks
 import SnapKit
 import UIKit
 
-class SliderGameVC: UIViewController {
+final class SliderGameVC: UIViewController {
+    
     private var game: SliderGame!
-    private let alert = CustomAlert(gameType: .sliderGame)
     private let rounds: Int = 5
-
+    
     // MARK: Scene Elements
     
     @IBOutlet var slider: UISlider!
     
-    private let checkButton: UIButton = {
-        let button = UIButton()
-        button.setAppButtonStyle(backgroundImage: "SliderCheckButton", title: "ПРОВЕРИТЬ", titleColor: .systemYellow)
-        return button
-    }()
+    private let sliderGameView = SliderGameView()
+    private lazy var checkButton = sliderGameView.checkButton
+    private lazy var homeButton = sliderGameView.homeButton
+    private lazy var infoButton = sliderGameView.infoButton
+    private lazy var roundLabel = sliderGameView.roundLabel
+    private lazy var secretNumberLabel = sliderGameView.secretNumberLabel
+    private lazy var secretNumberLabel2 = sliderGameView.secretNumberLabel
+    private lazy var alert = sliderGameView.alert
     
-    private let homeButton: UIButton = {
-        let button = UIButton()
-        button.setAppButtonStyle(backgroundImage: "SliderHomeButton")
-        return button
-    }()
+    // MARK: - Lifecycle
     
-    private let infoButton: UIButton = {
-        let button = UIButton()
-        button.setAppButtonStyle(backgroundImage: "SliderInfoButton")
-        return button
-    }()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupView()
+        makeConstraints()
+        bind()
+        setupGame()
+    }
     
-    private let secretNumberLabel: UILabel = {
-        let label = UILabel()
-        label.setLabelStyle(font: .boldSystemFont(ofSize: 26), textColor: .systemPurple)
-        return label
-    }()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "game")
+    }
     
-    private let secretNumberLabel2: UILabel = {
-        let label = UILabel()
-        label.setLabelStyle(font: .systemFont(ofSize: 25), textColor: .systemPink)
-        return label
-    }()
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        roundLabel.text = "РАУНД \(game.currentRound)"
+    }
+}
+
+private extension SliderGameVC {
+    private func setupGame() {
+        // Create instance of entity "Game"
+        game = SliderGame(startValue: 1, endValue: 50, rounds: rounds)
+        // Update label with actual(new random) secret number
+        updateLabelWithSecretNumber(newText: String(game.currentSecretValue))
+    }
     
-    private let roundLabel: UILabel = {
-        let label = UILabel()
-        label.setLabelStyle(font: .boldSystemFont(ofSize: 20), textColor: .systemPink)
-        return label
-    }()
+    // MARK: Setup View
+    
+    private func setupView() {
+        [sliderGameView, slider, alert].forEach(view.addSubview)
+    }
     
     // MARK: Constraints
     
     private func makeConstraints() {
-        checkButton.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.top.equalTo(slider.snp.bottom).offset(30)
-            make.height.equalTo(52)
-            make.width.equalTo(200)
-        }
-        
-        homeButton.snp.makeConstraints { make in
-            make.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).inset(20)
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).inset(20)
-            make.height.equalTo(40)
-            make.width.equalTo(40)
-        }
-        
-        infoButton.snp.makeConstraints { make in
-            make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).inset(20)
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).inset(20)
-            make.height.equalTo(40)
-            make.width.equalTo(40)
-        }
-        
-        secretNumberLabel.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.top.equalTo(slider.snp.bottom).offset(109)
-        }
-        
-        secretNumberLabel2.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.top.equalTo(slider.snp.bottom).offset(109)
-        }
-        
-        roundLabel.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).inset(35)
-            make.width.equalTo(100)
+        sliderGameView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
         }
         
         alert.snp.makeConstraints { make in
@@ -96,7 +71,7 @@ class SliderGameVC: UIViewController {
         }
     }
 
-    // MARK: Actions
+    // MARK: Bindings
     
     private func bind() {
         checkButton.addAction(UIAction(handler: { [weak self] _ in
@@ -113,47 +88,8 @@ class SliderGameVC: UIViewController {
         infoButton.addAction(UIAction(handler: { [weak self] _ in
             guard let self else { return }
             playSound(sound: "click", type: "wav")
-            showAlertWith(alertType: .infoAlert)
+            sliderGameView.showAlertWith(alertType: .infoAlert)
         }), for: .touchUpInside)
-    }
-
-    // MARK: Setup View
-    
-    private func setupView() {
-        view.addSubview(checkButton)
-        view.addSubview(homeButton)
-        view.addSubview(infoButton)
-        view.addSubview(secretNumberLabel)
-        view.addSubview(secretNumberLabel2)
-        view.addSubview(roundLabel)
-        view.addSubview(alert)
-    }
-    
-    // MARK: - Lifecycle
-    
-    override func loadView() {
-        super.loadView()
-        setupView()
-        makeConstraints()
-        bind()
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Create instance of entity "Game"
-        game = SliderGame(startValue: 1, endValue: 50, rounds: rounds)
-        // Update label with actual(new random) secret number
-        updateLabelWithSecretNumber(newText: String(game.currentSecretValue))
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "game")
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        roundLabel.text = "РАУНД \(game.currentRound)"
     }
     
     // MARK: - Interaction View - Model
@@ -164,7 +100,7 @@ class SliderGameVC: UIViewController {
         game.calculateScore(with: Int(slider.value))
         // Checking game ended
         if game.isGameEnded {
-            showAlertWith(alertType: .scoreAlert, score: game.score)
+            sliderGameView.showAlertWith(alertType: .scoreAlert, score: game.score, rounds: rounds)
             // Start new game
             game.restartGame()
         } else {
@@ -180,25 +116,5 @@ class SliderGameVC: UIViewController {
     private func updateLabelWithSecretNumber(newText: String) {
         secretNumberLabel.text = newText
         secretNumberLabel2.text = newText
-    }
-    
-    private func showAlertWith(alertType: alertTypesEnum, score: Int? = 0) {
-        alert.showAlert()
-        switch alertType {
-        case .scoreAlert:
-            let scoreString = String(score ?? 0)
-            alert.alertContent?("Игра окончена",
-                                "Вы заработали \(scoreString) из \(rounds * 50) очков",
-                                "SliderScoreAlertButton")
-            
-            score ?? 0 >= 200 ? playSound(sound: "win", type: "mp3") :
-                MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "gameOver")
-        case .infoAlert:
-            alert.alertContent?("Правила игры",
-                                "В игре \(rounds) раундов. \n Необходимо угадать \n расположение числа на слайдере.",
-                                "SliderInfoAlertButton")
-            
-            MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "info")
-        }
     }
 }

@@ -4,10 +4,25 @@
 
 import Feedbacks
 import SnapKit
+import Toast
 import UIKit
 
-class CardsGameVC: UIViewController, UITextFieldDelegate {
-    private let alert = CustomAlert(gameType: .cardGame)
+final class CardsGameVC: UIViewController {
+    
+    private let cardGameView = CardGameView()
+    private lazy var scoreLabel = cardGameView.scoreLabel
+    private lazy var homeButton = cardGameView.homeButton
+    private lazy var infoButton = cardGameView.infoButton
+    private lazy var startButton = cardGameView.startButton
+    private lazy var errorLabel = cardGameView.errorLabel
+    private lazy var nameTextField = cardGameView.nameTextField
+    private lazy var boardGameView = cardGameView.boardGameView
+    private lazy var nameLabel = cardGameView.nameLabel
+    private lazy var timerLabel = cardGameView.timerLabel
+    
+    private lazy var countTimer = cardGameView.countTimer
+    private lazy var totalTime = cardGameView.totalTime
+    
     // "Game" entity
     lazy var game: CardGame = getNewGame()
     // Count of unique card pairs
@@ -21,10 +36,7 @@ class CardsGameVC: UIViewController, UITextFieldDelegate {
     
     // Start / Restart Bckd image
     var backgroundImageState: Int = 0
-    
-    var countTimer: Timer?
-    var totalTime: Int = 0
-    
+        
     var userName: String = ""
     
     var gameScore: Int = 0 {
@@ -35,239 +47,18 @@ class CardsGameVC: UIViewController, UITextFieldDelegate {
         }
     }
     
-    // MARK: Scene Elements
-    
-    private let homeButton: UIButton = {
-        let button = UIButton()
-        button.setAppButtonStyle(backgroundImage: "CardsHomeButton")
-        return button
-    }()
-    
-    private let infoButton: UIButton = {
-        let button = UIButton()
-        button.setAppButtonStyle(backgroundImage: "CardsInfoButton")
-        return button
-    }()
-    
-    private let startButton: UIButton = {
-        let button = UIButton()
-        button.setAppButtonStyle(backgroundImage: "CardsStratButton")
-        return button
-    }()
-    
-    private let nameTextField: UITextField = {
-        let textField = UITextField()
-        textField.layer.cornerRadius = 15
-        textField.backgroundColor = .white
-        textField.tintColor = .red
-        
-        textField.layer.shadowOpacity = 0.5
-        textField.layer.shadowOffset = .zero
-        textField.layer.shadowRadius = 4
-        
-        textField.attributedPlaceholder = NSAttributedString(string: "Enter your name", attributes: [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 1, green: 0.8496571183, blue: 0.9784039855, alpha: 1)])
-        textField.textAlignment = .center
-        textField.font = UIFont.boldSystemFont(ofSize: 20)
-        textField.textColor = .red
-        
-        textField.keyboardType = .asciiCapable
-        
-        return textField
-    }()
-    
-    private let errorLabel: UILabel = {
-        let label = UILabel()
-        label.setLabelStyle(font: .systemFont(ofSize: 18), textColor: .red)
-        label.text = "Please enter your name"
-        label.isHidden = true
-        label.alpha = 0
-        return label
-    }()
-    
-    private let boardGameView: UIView = {
-        let boardView = UIView()
-        boardView.backgroundColor = .none
-        return boardView
-    }()
-    
-    private let scoreLabel: UILabel = {
-        let label = UILabel()
-        label.setLabelStyle(font: .boldSystemFont(ofSize: 20), textColor: .systemRed)
-        return label
-    }()
-    
-    private let timerLabel: UILabel = {
-        let label = UILabel()
-        label.setLabelStyle(font: .boldSystemFont(ofSize: 20), textColor: .systemRed)
-        label.textAlignment = .right
-        return label
-    }()
-    
-    private let nameLabel: UILabel = {
-        let label = UILabel()
-        label.setLabelStyle(font: .boldSystemFont(ofSize: 20), textColor: .systemRed)
-        label.textAlignment = .right
-        return label
-    }()
-    
-    // MARK: Constraints
-    
-    private func makeConstraints() {
-        homeButton.snp.makeConstraints { make in
-            make.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).inset(20)
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).inset(20)
-            make.height.equalTo(40)
-            make.width.equalTo(40)
-        }
-        
-        infoButton.snp.makeConstraints { make in
-            make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).inset(20)
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).inset(20)
-            make.height.equalTo(40)
-            make.width.equalTo(40)
-        }
-        
-        startButton.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview()
-            make.width.equalTo(340)
-            make.height.equalTo(104)
-        }
-        
-        nameTextField.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).inset(20)
-            make.width.equalTo(200)
-            make.height.equalTo(40)
-        }
-        
-        errorLabel.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.top.equalTo(nameTextField.snp.bottom).inset(3)
-            make.width.equalTo(200)
-            make.height.equalTo(40)
-        }
-        
-        boardGameView.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.top.equalTo(startButton.snp.bottom).offset(0)
-            make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(0)
-            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(5)
-        }
-        
-        scoreLabel.snp.makeConstraints { make in
-            make.leading.equalTo(homeButton.snp.trailing)
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).inset(30)
-            make.width.equalTo(100)
-        }
-        
-        timerLabel.snp.makeConstraints { make in
-            make.trailing.equalTo(infoButton.snp.leading).inset(-15)
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).inset(30)
-            make.width.equalTo(50)
-        }
-        
-        nameLabel.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).inset(30)
-            make.width.equalTo(100)
-        }
-        
-        alert.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
-    }
-    
-    // MARK: Actions
-    
-    private func bind() {
-        homeButton.addAction(UIAction(handler: { [weak self] _ in
-            playSound(sound: "click", type: "wav")
-            self?.dismiss(animated: true, completion: nil)
-            MusicPlayer.shared.stopBackgroundMusic()
-        }), for: .touchUpInside)
-        
-        infoButton.addAction(UIAction(handler: { [weak self] _ in
-            guard let self else { return }
-            playSound(sound: "click", type: "wav")
-            showAlertWith(alertType: .infoAlert)
-        }), for: .touchUpInside)
-        
-        startButton.addAction(UIAction(title: "", handler: { [weak self] _ in
-            // Checking for empty nameTextField
-            self?.checkNameField()
-            guard (self?.errorLabel.isHidden) == true else { return }
-            
-            // Hide the keyboard if it is open
-            self?.nameTextField.resignFirstResponder()
-            
-            // Game board locking for the animation time
-            self?.boardGameView.isUserInteractionEnabled = false
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
-                self?.boardGameView.isUserInteractionEnabled = true
-            }
-            
-            playSound(sound: "startGame", type: "mp3")
-            self?.nameLabel.text = self?.nameTextField.text
-            
-            UIView.animate(withDuration: 0.5, animations: {
-                self?.startButton.snp.remakeConstraints { make in
-                    make.centerX.equalToSuperview()
-                    make.top.equalTo(self?.view.safeAreaLayoutGuide.snp.top ?? 0).inset(20)
-                    make.width.equalTo(170)
-                    make.height.equalTo(52)
-                }
-                
-                self?.nameTextField.snp.remakeConstraints { make in
-                    make.centerX.equalToSuperview().offset(-1500)
-                    make.top.equalTo(self?.view.safeAreaLayoutGuide.snp.top ?? 0).inset(20)
-                }
-                
-                self?.nameLabel.snp.remakeConstraints { make in
-                    make.trailing.equalTo(self?.timerLabel.snp.leading ?? 0).inset(0)
-                    make.top.equalTo(self?.view.safeAreaLayoutGuide.snp.top ?? 0).inset(30)
-                    make.width.equalTo(150)
-                }
-                
-                self?.view.layoutIfNeeded()
-            }, completion: { _ in
-            })
-            
-            guard let newGame = self?.getNewGame() else { return }
-            self?.game = newGame
-            guard let cards = self?.getCardsBy(modelData: newGame.cards) else { return }
-            self?.placeCardsOnBoard(cards)
-        }), for: .touchUpInside)
-    }
-    
-    // MARK: Setup View
-    
-    private func setupView() {
-        view.backgroundColor = UIColor(patternImage: UIImage(named: "CardGameBackground")!)
-        view.addSubview(homeButton)
-        view.addSubview(infoButton)
-        view.addSubview(boardGameView)
-        view.addSubview(nameLabel)
-        view.addSubview(startButton)
-        view.addSubview(nameTextField)
-        view.addSubview(errorLabel)
-        view.addSubview(scoreLabel)
-        view.addSubview(timerLabel)
-        view.addSubview(alert)
-    }
-    
     // MARK: - Lifecycle
-    
-    override func loadView() {
-        super.loadView()
+        
+    override func viewDidLoad() {
+        super.viewDidLoad()
         setupView()
         makeConstraints()
         bind()
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+        
         nameTextField.delegate = self
+        
+        // Hiding the keyboard by tapping the screen
+        setupGestureRecognizers()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -284,9 +75,83 @@ class CardsGameVC: UIViewController, UITextFieldDelegate {
         super.viewWillDisappear(animated)
         countTimer?.invalidate()
     }
+}
+
+// MARK: Private Methods
+
+private extension CardsGameVC {
+    // MARK: Setup View
     
-    // MARK: Preparing new game
+    private func setupView() {
+        view.backgroundColor = UIColor(patternImage: UIImage(named: "CardGameBackground")!)
+        view.addSubview(cardGameView)
+    }
     
+    // MARK: Constraints
+    
+    private func makeConstraints() {
+        cardGameView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+    }
+    
+    // MARK: Bindings
+    
+    private func bind() {
+        homeButton.addAction(UIAction(handler: { [weak self] _ in
+            self?.handleHomeButtonTap()
+        }), for: .touchUpInside)
+        
+        infoButton.addAction(UIAction(handler: { [weak self] _ in
+            self?.handleInfoButtonTap()
+        }), for: .touchUpInside)
+        
+        startButton.addAction(UIAction(title: "", handler: { [weak self] _ in
+            self?.handleStartButtonTap()
+        }), for: .touchUpInside)
+    }
+    
+    private func handleHomeButtonTap() {
+        playClickSound()
+        dismiss(animated: true, completion: nil)
+        MusicPlayer.shared.stopBackgroundMusic()
+    }
+    
+    private func handleInfoButtonTap() {
+        playClickSound()
+        cardGameView.showAlertWith(alertType: .infoAlert)
+    }
+    
+    private func handleStartButtonTap() {
+        checkNameField()
+        guard errorLabel.isHidden else { return }
+        
+        nameTextField.resignFirstResponder()
+        boardGameView.isUserInteractionEnabled = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+            self.boardGameView.isUserInteractionEnabled = true
+        }
+        
+        playSound(sound: "startGame", type: "mp3")
+        nameLabel.text = nameTextField.text
+        
+        cardGameView.animateStartButton()
+        
+        let newGame = getNewGame()
+        game = newGame
+        let cards = getCardsBy(modelData: newGame.cards)
+        placeCardsOnBoard(cards)
+    }
+    
+    private func playClickSound() {
+        playSound(sound: "click", type: "wav")
+    }
+}
+
+// MARK: Game Process
+
+private extension CardsGameVC {
+    // Preparing new game
     private func getNewGame() -> CardGame {
         let game = CardGame()
         gameScore = 0
@@ -295,8 +160,7 @@ class CardsGameVC: UIViewController, UITextFieldDelegate {
         return game
     }
     
-    // MARK: Card array generation
-    
+    // Card array generation
     private func getCardsBy(modelData: [Card]) -> [UIView] {
         // Cards view array
         var cardViews = [UIView]()
@@ -353,7 +217,8 @@ class CardsGameVC: UIViewController, UITextFieldDelegate {
                         })
                         
                         guard self.gameScore != (self.cardsPairsCounts + 1) * 5 else {
-                            self.showAlertWith(alertType: .scoreAlert, score: self.gameScore)
+                            self.cardGameView.showAlertWith(alertType: .scoreAlert, score: self.gameScore, totalTime: self.totalTime)
+                            self.countTimer?.invalidate()
                             UIView.animate(withDuration: 0.5) {
                                 self.startButton.snp.remakeConstraints { make in
                                     make.centerX.equalToSuperview()
@@ -371,9 +236,7 @@ class CardsGameVC: UIViewController, UITextFieldDelegate {
                             }
                             
                             // Set data to UserDefaults
-                            UserDefaults.standard.set(self.userName, forKey: "userName")
-                            UserDefaults.standard.set(self.totalTime, forKey: "totalTime")
-                            UserDefaults.standard.synchronize()
+                            self.savePlayerData(userName: self.userName, totalTime: self.totalTime)
                             
                             return
                         }
@@ -393,8 +256,28 @@ class CardsGameVC: UIViewController, UITextFieldDelegate {
         return cardViews
     }
     
-    // MARK: Place cards on board
-    
+    private func savePlayerData(userName: String, totalTime: Int) {
+        var players = UserDefaults.standard.dictionary(forKey: "players") as? [String: Int] ?? [:]
+        var isNewRecord = false
+        
+        if let existingTime = players[userName] {
+            if totalTime < existingTime {
+                players[userName] = totalTime
+                isNewRecord = true
+            }
+        } else {
+            players[userName] = totalTime
+            isNewRecord = true
+        }
+        
+        UserDefaults.standard.set(players, forKey: "players")
+        
+        if isNewRecord, players.values.min() == totalTime {
+            self.view.makeToast("🏆 NEW RECORD 🏆", duration: 3.0, position: .top)
+        }
+    }
+
+    // Place cards on board
     private func placeCardsOnBoard(_ cards: [UIView]) {
         // Delete all cards from game board
         for card in cardViews {
@@ -434,8 +317,6 @@ class CardsGameVC: UIViewController, UITextFieldDelegate {
             boardGameView.addSubview(card)
         }
         
-        // MARK: Methods
-        
         // Update start button background
         func updateBackgroundImage() {
             switch backgroundImageState {
@@ -466,29 +347,8 @@ class CardsGameVC: UIViewController, UITextFieldDelegate {
         })
     }
     
-    // Preparing alert
-    private func showAlertWith(alertType: alertTypesEnum, score: Int? = 0) {
-        alert.showAlert()
-        switch alertType {
-        case .scoreAlert:
-            let scoreString = String(score ?? 0)
-            alert.alertContent?("Игра окончена",
-                                "Вы набрали \(scoreString) очков \nЗа \(totalTime) секунд ",
-                                "CardsScoreAlertButton")
-            
-            countTimer?.invalidate()
-            playSound(sound: "win", type: "mp3")
-            
-        case .infoAlert:
-            alert.alertContent?("Правила игры",
-                                "Найдите пары карточек", "CardsInfoAlertButton")
-            
-            MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "info")
-        }
-    }
-    
     // Starting game timer
-    func startTimer() {
+    private func startTimer() {
         countTimer?.invalidate()
         playSound(sound: "startTimer", type: "mp3")
         totalTime = 0
@@ -500,7 +360,11 @@ class CardsGameVC: UIViewController, UITextFieldDelegate {
         totalTime += 1
         timerLabel.text = "\(totalTime)"
     }
-    
+}
+
+// MARK: - UITextFieldDelegate
+
+extension CardsGameVC: UITextFieldDelegate {
     // Actions after pressing return button
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         nameTextField.resignFirstResponder()
@@ -516,6 +380,7 @@ class CardsGameVC: UIViewController, UITextFieldDelegate {
                 self.errorLabel.isHidden = false
                 self.errorLabel.alpha = 1
             }
+            
             return
         }
         userName = name

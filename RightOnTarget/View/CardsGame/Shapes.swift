@@ -7,6 +7,7 @@ import UIKit
 // MARK: Card back design (circles)
 
 class BackSideCircle: CAShapeLayer, ShapeLayerProtocol {
+    
     required init(size: CGSize, fillColor: CGColor) {
         super.init()
 

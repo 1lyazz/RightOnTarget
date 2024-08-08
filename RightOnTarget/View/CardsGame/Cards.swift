@@ -4,7 +4,8 @@
 
 import UIKit
 
-class CardView<ShapeType: ShapeLayerProtocol>: UIView, FlippableView {
+final class CardView<ShapeType: ShapeLayerProtocol>: UIView, FlippableView {
+    
     // Shape color
     var color: UIColor!
     var cornerRadius = 20
@@ -28,6 +29,8 @@ class CardView<ShapeType: ShapeLayerProtocol>: UIView, FlippableView {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard touches.first != nil else { return }
+
         // Change the coordinates of the anchor point (anchorTouchPoint)
         self.anchorTouchPoint.x = touches.first!.location(in: window).x - frame.minX
         self.anchorTouchPoint.y = touches.first!.location(in: window).y - frame.minY
@@ -37,6 +40,7 @@ class CardView<ShapeType: ShapeLayerProtocol>: UIView, FlippableView {
     }
 
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard touches.first != nil else { return }
         self.frame.origin.x = touches.first!.location(in: window).x - self.anchorTouchPoint.x
         self.frame.origin.y = touches.first!.location(in: window).y - self.anchorTouchPoint.y
     }

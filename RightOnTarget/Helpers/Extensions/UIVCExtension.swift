@@ -10,4 +10,11 @@ extension UIViewController {
         viewController.modalPresentationStyle = .fullScreen
         self.present(viewController, animated: true, completion: nil)
     }
+    
+    // Hiding the keyboard by tapping the screen
+    func setupGestureRecognizers() {
+        let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
 }

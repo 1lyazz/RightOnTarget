@@ -4,11 +4,13 @@
 
 import UIKit
 
-class CardGame {
+final class CardGame {
+    
     // Count of unique card pairs
     var cardsCount = 0
     // Generated cards array
     var cards = [Card]()
+    
     // Generation of random cards array
     func generateCards() {
         // Generation new cards array
