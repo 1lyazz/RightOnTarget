@@ -9,7 +9,7 @@ final class SliderGameView: UIView {
     
     // MARK: - UI Elements
     
-    private let alert = CustomAlert(gameType: .sliderGame)
+    let alert = CustomAlert(gameType: .sliderGame)
     
     let checkButton: UIButton = {
         let button = UIButton()
@@ -87,7 +87,7 @@ final class SliderGameView: UIView {
 
 private extension SliderGameView {
     private func setupView() {
-        [checkButton, homeButton, infoButton, secretNumberLabel, secretNumberLabel2, roundLabel, alert].forEach(addSubview)
+        [checkButton, homeButton, infoButton, secretNumberLabel, secretNumberLabel2, roundLabel].forEach(addSubview)
     }
 
     private func setupViewConstraints() {

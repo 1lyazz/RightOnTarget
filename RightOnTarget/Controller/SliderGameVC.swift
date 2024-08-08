@@ -55,7 +55,7 @@ private extension SliderGameVC {
     // MARK: Setup View
     
     private func setupView() {
-        [sliderGameView, slider].forEach(view.addSubview)
+        [sliderGameView, slider, alert].forEach(view.addSubview)
     }
     
     // MARK: Constraints
