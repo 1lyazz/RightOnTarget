@@ -64,6 +64,10 @@ private extension SliderGameVC {
         sliderGameView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
+        
+        alert.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
     }
 
     // MARK: Bindings

@@ -87,7 +87,7 @@ final class SliderGameView: UIView {
 
 private extension SliderGameView {
     private func setupView() {
-        [checkButton, homeButton, infoButton, secretNumberLabel, secretNumberLabel2, roundLabel].forEach(addSubview)
+        [checkButton, homeButton, infoButton, secretNumberLabel, secretNumberLabel2, roundLabel, alert].forEach(addSubview)
     }
 
     private func setupViewConstraints() {
@@ -126,10 +126,6 @@ private extension SliderGameView {
             make.centerX.equalToSuperview()
             make.top.equalTo(self.safeAreaLayoutGuide.snp.top).inset(35)
             make.width.equalTo(100)
-        }
-        
-        alert.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
         }
     }
 }
