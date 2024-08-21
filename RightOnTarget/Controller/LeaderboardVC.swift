@@ -6,13 +6,7 @@ import UIKit
 
 final class LeaderboardVC: UIViewController {
     
-    // Dictionary of players and time records
-    var players = [String: Int]()
-    var sortedPlayers = [(key: String, value: Int)]()
-    
-    // MARK: Scene Elements
-    
-    @IBOutlet private var collectionView: UICollectionView!
+    private var leaderboardCollection = LeaderboardCollection()
     
     private let homeButton: UIButton = {
         let button = UIButton()
@@ -33,7 +27,6 @@ final class LeaderboardVC: UIViewController {
         setupView()
         makeConstraints()
         bind()
-        collectionSetup()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -49,51 +42,10 @@ final class LeaderboardVC: UIViewController {
 }
 
 private extension LeaderboardVC {
-    // MARK: Collection Views
-    
-    private func collectionSetup() {
-        loadDataFromUserDefaults()
-        sortPlayers()
-        setupCollectionView()
-        collectionView.reloadData()
-        print("Collection view reloaded with \(sortedPlayers.count) items")
-    }
-       
-    private func loadDataFromUserDefaults() {
-        let defaults = UserDefaults.standard
-        if let savedPlayers = defaults.dictionary(forKey: "players") as? [String: Int] {
-            players = savedPlayers
-            print("Loaded players: \(players)")
-        }
-    }
-        
-    private func saveDataToUserDefaults() {
-        let defaults = UserDefaults.standard
-        defaults.set(players, forKey: "players")
-    }
-        
-    private func addPlayer(name: String, time: Int) {
-        players[name] = time
-        saveDataToUserDefaults()
-        print("Added player: \(name) with time: \(time)")
-    }
-           
-    private func sortPlayers() {
-        sortedPlayers = players.sorted { $0.value < $1.value }
-    }
-       
-    private func setupCollectionView() {
-        collectionView.dataSource = self
-        let leaderboardCellNib = UINib(nibName: "LeaderboardCell", bundle: nil)
-        collectionView.register(leaderboardCellNib, forCellWithReuseIdentifier: "LeaderboardCell")
-        print("Collection view setup completed")
-    }
-    
     // MARK: Setup Views
     
     private func setupView() {
-        view.addSubview(homeButton)
-        view.addSubview(boardTitle)
+        [homeButton, boardTitle, leaderboardCollection].forEach { view.addSubview($0) }
     }
     
     // MARK: Constraints
@@ -112,6 +64,13 @@ private extension LeaderboardVC {
             make.height.equalTo(110)
             make.width.equalTo(300)
         }
+        
+        leaderboardCollection.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(20)
+            make.top.equalTo(boardTitle.snp.bottom).offset(20)
+            make.bottom.equalTo(view)
+        }
     }
     
     // MARK: Bindings
@@ -124,15 +83,3 @@ private extension LeaderboardVC {
     }
 }
 
-// MARK: UICollectionView
-
-extension LeaderboardVC: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int { sortedPlayers.count }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LeaderboardCell", for: indexPath) as! LeaderboardCell
-        let player = sortedPlayers[indexPath.item]
-        cell.configure(username: player.key, time: player.value)
-        return cell
-    }
-}
