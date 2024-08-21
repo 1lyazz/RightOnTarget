@@ -38,9 +38,9 @@
 6. Use of the [Storyboard](https://developer.apple.com/documentation/uikit/uistoryboard) for demonstration purposes only
 7. [CocoaPods](https://cocoapods.org): A dependency manager for iOS projects
 8. [Git](https://git-scm.com): A version control system for managing source code
-9. Collection (Leaderboard) building with UICollectionViewCompositionalLayout
-10. Two collections with different creation methods: code only and with a storyboard
-11. Cell Animations with CoreAnimation:
+9. Collection (Leaderboard) building with [UICollectionViewCompositionalLayout](https://developer.apple.com/documentation/uikit/uicollectionviewcompositionallayout)
+10. Two collections with different creation methods: code only and with a [storyboard](https://developer.apple.com/library/archive/documentation/General/Conceptual/Devpedia-CocoaApp/Storyboard.html/)
+11. Cell Animations with [CoreAnimation](https://developer.apple.com/documentation/quartzcore):
 
 <div align="center"><br>
   <img src="Screenshots/Leaderboard.gif" style="border-radius: 15px;">
