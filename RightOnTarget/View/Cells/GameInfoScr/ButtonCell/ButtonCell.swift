@@ -6,13 +6,13 @@ import Feedbacks
 import UIKit
 
 class ButtonCell: UICollectionViewCell {
-    // MARK: IBOutlets
+    // MARK: - IBOutlets
 
     @IBOutlet private var topButton: UIButton!
     @IBOutlet private var versButton: UIButton!
     @IBOutlet private var bottomButton: UIButton!
 
-    // MARK: Public
+    // MARK: - Public
 
     func configure(topImage: UIImage?, versImage: UIImage?, bottomImage: UIImage?) {
         let scaledTopImage = topImage?.resized(to: CGSize(width: 60, height: 40))
@@ -24,7 +24,7 @@ class ButtonCell: UICollectionViewCell {
         bottomButton.setImage(scaledBottomImage, for: .normal)
     }
     
-    // MARK: View Lifecycle
+    // MARK: - View Lifecycle
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,7 +36,7 @@ class ButtonCell: UICollectionViewCell {
         bottomButton.layer.cornerRadius = 16
     }
 
-    // MARK: Actions
+    // MARK: - Actions
     
     let gameInfoVC = GameInfoVC()
     

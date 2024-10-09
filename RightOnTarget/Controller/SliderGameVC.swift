@@ -11,7 +11,7 @@ final class SliderGameVC: UIViewController {
     private var game: SliderGame!
     private let rounds: Int = 5
     
-    // MARK: Scene Elements
+    // MARK: - Scene Elements
     
     @IBOutlet var slider: UISlider!
     
@@ -53,13 +53,13 @@ private extension SliderGameVC {
         updateLabelWithSecretNumber(newText: String(game.currentSecretValue))
     }
     
-    // MARK: Setup View
+    // MARK: - Setup View
     
     private func setupView() {
         [sliderGameView, slider, alert].forEach(view.addSubview)
     }
     
-    // MARK: Constraints
+    // MARK: - Constraints
     
     private func makeConstraints() {
         sliderGameView.snp.makeConstraints { make in
@@ -71,7 +71,7 @@ private extension SliderGameVC {
         }
     }
 
-    // MARK: Bindings
+    // MARK: - Bindings
     
     private func bind() {
         checkButton.addAction(UIAction(handler: { [weak self] _ in

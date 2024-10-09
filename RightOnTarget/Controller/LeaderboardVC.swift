@@ -20,7 +20,7 @@ final class LeaderboardVC: UIViewController {
         return imageView
     }()
     
-    // MARK: Lifecycle
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,13 +42,13 @@ final class LeaderboardVC: UIViewController {
 }
 
 private extension LeaderboardVC {
-    // MARK: Setup Views
+    // MARK: - Setup Views
     
     private func setupView() {
         [homeButton, boardTitle, leaderboardCollection].forEach { view.addSubview($0) }
     }
     
-    // MARK: Constraints
+    // MARK: - Constraints
     
     private func makeConstraints() {
         homeButton.snp.makeConstraints { make in
@@ -73,7 +73,7 @@ private extension LeaderboardVC {
         }
     }
     
-    // MARK: Bindings
+    // MARK: - Bindings
     
     private func bind() {
         homeButton.addAction(UIAction(handler: { [weak self] _ in

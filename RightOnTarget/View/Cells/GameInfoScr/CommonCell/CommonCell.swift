@@ -5,7 +5,7 @@
 import UIKit
 
 class CommonCell: UICollectionViewCell {
-    // MARK: IBOutlets
+    // MARK: - IBOutlets
 
     @IBOutlet private var iconImageView: UIImageView!
     @IBOutlet private var topImageView: UIImageView!
@@ -13,7 +13,7 @@ class CommonCell: UICollectionViewCell {
     @IBOutlet private var bottomImageView: UIImageView!
     @IBOutlet private var textLabel: UILabel!
 
-    // MARK: Public
+    // MARK: - Public
 
     func configure(icon: UIImage?, topImage: UIImage?, versImage: UIImage?, bottomImage: UIImage?, text: String) {
         iconImageView.image = icon
@@ -23,7 +23,7 @@ class CommonCell: UICollectionViewCell {
         textLabel.text = text
     }
 
-    // MARK: View Lifecycle
+    // MARK: - View Lifecycle
 
     override func awakeFromNib() {
         super.awakeFromNib()

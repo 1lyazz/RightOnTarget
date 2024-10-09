@@ -8,7 +8,7 @@ final class GameInfoVC: UIViewController {
     
     var cellIcon: UIImage = .hexGameLogo
 
-    // MARK: Scene Elements
+    // MARK: - Scene Elements
 
     @IBOutlet private var collectionView: UICollectionView!
 
@@ -45,14 +45,14 @@ private extension GameInfoVC {
         collectionView.register(commonCellNib, forCellWithReuseIdentifier: "CommonCell")
     }
 
-    // MARK: Setup Views
+    // MARK: - Setup Views
 
     private func setupView() {
         view.addSubview(homeButton)
         view.addSubview(infoTitle)
     }
 
-    // MARK: Constraints
+    // MARK: - Constraints
 
     private func makeConstraints() {
         homeButton.snp.makeConstraints { make in
@@ -70,7 +70,7 @@ private extension GameInfoVC {
         }
     }
 
-    // MARK: Bindings
+    // MARK: - Bindings
 
     private func bind() {
         homeButton.addAction(UIAction(handler: { [weak self] _ in
@@ -80,7 +80,7 @@ private extension GameInfoVC {
     }
 }
 
-// MARK: UICollection Datf Source
+// MARK: - UICollection Datf Source
 
 extension GameInfoVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int { 4 }
