@@ -77,17 +77,17 @@ final class CardsGameVC: UIViewController {
     }
 }
 
-// MARK: Private Methods
+// MARK: - Private Methods
 
 private extension CardsGameVC {
-    // MARK: Setup View
+    // MARK: - Setup View
     
     private func setupView() {
         view.backgroundColor = UIColor(patternImage: UIImage(named: "CardGameBackground")!)
         view.addSubview(cardGameView)
     }
     
-    // MARK: Constraints
+    // MARK: - Constraints
     
     private func makeConstraints() {
         cardGameView.snp.makeConstraints { make in
@@ -95,7 +95,7 @@ private extension CardsGameVC {
         }
     }
     
-    // MARK: Bindings
+    // MARK: - Bindings
     
     private func bind() {
         homeButton.addAction(UIAction(handler: { [weak self] _ in
@@ -148,7 +148,7 @@ private extension CardsGameVC {
     }
 }
 
-// MARK: Game Process
+// MARK: - Game Process
 
 private extension CardsGameVC {
     // Preparing new game

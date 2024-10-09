@@ -12,7 +12,7 @@ final class HomeVC: UIViewController {
         static let appDarkGray = UIColor(red: 37/255, green: 37/255, blue: 37/255, alpha: 1)
     }
     
-    // MARK: Scene Elements
+    // MARK: - Scene Elements
     
     private let homeView = HomeView()
     private lazy var hexGameButton = homeView.buttons.hexGameButton
@@ -21,7 +21,7 @@ final class HomeVC: UIViewController {
     private lazy var gameInfoButton = homeView.buttons.gameInfoButton
     private lazy var leaderboardButton = homeView.buttons.leaderboardButton
     
-    // MARK: Lifecycle
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,20 +42,20 @@ final class HomeVC: UIViewController {
     }
 }
 
-// MARK: Private Methods
+// MARK: - Private Methods
 
 private extension HomeVC {
     private func setupStyle() {
         view.backgroundColor = Constants.appDarkGray
     }
     
-    // MARK: Setup View
+    // MARK: - Setup View
     
     private func setupView() {
         view.addSubview(homeView)
     }
     
-    // MARK: Constraints
+    // MARK: - Constraints
     
     private func makeConstraints() {
         homeView.snp.makeConstraints { make in
@@ -63,7 +63,7 @@ private extension HomeVC {
         }
     }
 
-    // MARK: Bindings
+    // MARK: - Bindings
     
     private func bind() {
         hexGameButton.addAction(UIAction(handler: { [weak self] _ in

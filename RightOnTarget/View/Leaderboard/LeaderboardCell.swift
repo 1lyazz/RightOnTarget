@@ -33,7 +33,7 @@ final class LeaderboardCell: UICollectionViewCell {
         contentView.layer.masksToBounds = true
     }
     
-    // MARK: Constraints
+    // MARK: - Constraints
     
     private func makeConstraints() {
         usernameLabel.snp.makeConstraints { make in
@@ -51,14 +51,14 @@ final class LeaderboardCell: UICollectionViewCell {
         }
     }
     
-    // MARK: Public
+    // MARK: - Public
     
     func configure(username: String, time: Int) {
         usernameLabel.text = username
         timeRecordLabel.text = "\(time)"
     }
     
-    // MARK: Private
+    // MARK: - Private
     
     private func createLabel(fontSize: CGFloat, text: String? = nil) -> UILabel {
         let label = UILabel()

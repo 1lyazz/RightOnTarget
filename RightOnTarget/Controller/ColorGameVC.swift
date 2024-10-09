@@ -13,7 +13,7 @@ final class ColorGameVC: UIViewController {
     private var colorButtons = [UIButton]()
     private var secretColorsArray: [UIColor] = [.red, .green, .blue, .white, .black, .yellow]
     
-    // MARK: Scene Elements
+    // MARK: - Scene Elements
     
     private let colorGameView = ColorGameView()
     private lazy var homeButton = colorGameView.homeButton
@@ -49,7 +49,7 @@ final class ColorGameVC: UIViewController {
     }
 }
 
-// MARK: Private Methods
+// MARK: - Private Methods
 
 private extension ColorGameVC {
     private func setupStyle() {
@@ -64,13 +64,13 @@ private extension ColorGameVC {
         updateHexSecretColor(newColorHex: game.getSecretColorHex())
     }
     
-    // MARK: Setup View
+    // MARK: - Setup View
     
     private func setupView() {
         view.addSubview(colorGameView)
     }
     
-    // MARK: Constraints
+    // MARK: - Constraints
     
     private func makeConstraints() {
         colorGameView.snp.makeConstraints { make in
@@ -78,7 +78,7 @@ private extension ColorGameVC {
         }
     }
     
-    // MARK: Bindings
+    // MARK: - Bindings
     
     private func bind() {
         homeButton.addAction(UIAction(handler: { [weak self] _ in

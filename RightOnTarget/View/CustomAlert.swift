@@ -7,7 +7,7 @@ import UIKit
 
 final class CustomAlert: UIView {
     
-    // MARK: Alert Elements
+    // MARK: - Alert Elements
     
     var alertContent: ((String, String, String) -> Void)?
     
@@ -53,7 +53,7 @@ final class CustomAlert: UIView {
         return button
     }()
     
-    // MARK: Init
+    // MARK: - Init
     
     init(gameType: gameTypeEnum) {
         super.init(frame: .zero)
@@ -68,7 +68,7 @@ final class CustomAlert: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    // MARK: Constraints
+    // MARK: - Constraints
     
     private func makeConstraints() {
         backgroundView.snp.makeConstraints { make in
@@ -104,14 +104,14 @@ final class CustomAlert: UIView {
         }
     }
     
-    // MARK: Setup View
+    // MARK: - Setup View
     
     private func setupView() {
         [backgroundView, alertView, closeButton].forEach(self.addSubview)
         [backgroundImage, titleLabel, messageLabel].forEach(alertView.addSubview)
     }
     
-    // MARK: Alert Methods
+    // MARK: - Alert Methods
     
     private func setAlertContent() {
         alertContent = { [weak self] title, message, button in

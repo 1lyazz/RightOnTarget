@@ -221,13 +221,6 @@
 			path = GameInfoScr;
 			sourceTree = "<group>";
 		};
-		0A355B5F2C2D9737008BA90B /* LeaderboardScr */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = LeaderboardScr;
-			sourceTree = "<group>";
-		};
 		0A5650632BF0DFC000231B71 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,7 +235,6 @@
 		0A5650682BF0F36600231B71 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0A355B5F2C2D9737008BA90B /* LeaderboardScr */,
 				0A692B312C60C19F00D1E144 /* Home */,
 				0A692B3D2C60E13400D1E144 /* ColorGame */,
 				0A692B422C60F28F00D1E144 /* SliderGame */,
