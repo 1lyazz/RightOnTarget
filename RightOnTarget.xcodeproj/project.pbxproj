@@ -58,6 +58,7 @@
 		0AE5B3C42C298CED00AEE596 /* CommonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5B3C32C298CED00AEE596 /* CommonCell.swift */; };
 		0AF0305E2BFCF54A00BCCED8 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF0305D2BFCF54A00BCCED8 /* UIButtonExtension.swift */; };
 		0AF030622BFD06BB00BCCED8 /* UIVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF030612BFD06BB00BCCED8 /* UIVCExtension.swift */; };
+		0AF9F0792CB96239001E60D7 /* LayerAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9F0782CB96239001E60D7 /* LayerAnimator.swift */; };
 		8F788D121E5876BC07089F8D /* Pods_RightOnTarget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4D6E09E8B455CCB79B1C26 /* Pods_RightOnTarget.framework */; };
 /* End PBXBuildFile section */
 
@@ -127,6 +128,7 @@
 		0AE5B3C32C298CED00AEE596 /* CommonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonCell.swift; sourceTree = "<group>"; };
 		0AF0305D2BFCF54A00BCCED8 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		0AF030612BFD06BB00BCCED8 /* UIVCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIVCExtension.swift; sourceTree = "<group>"; };
+		0AF9F0782CB96239001E60D7 /* LayerAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerAnimator.swift; sourceTree = "<group>"; };
 		3E4D6E09E8B455CCB79B1C26 /* Pods_RightOnTarget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RightOnTarget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4964BD305B503B6483682811 /* Pods-RightOnTarget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RightOnTarget.release.xcconfig"; path = "Target Support Files/Pods-RightOnTarget/Pods-RightOnTarget.release.xcconfig"; sourceTree = "<group>"; };
 		93D05897E1177B3C94390DCA /* Pods-RightOnTarget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RightOnTarget.debug.xcconfig"; path = "Target Support Files/Pods-RightOnTarget/Pods-RightOnTarget.debug.xcconfig"; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 				0AE5B3BA2C2981D800AEE596 /* Cells */,
 				0A1195592C1EDEF000AB7B4D /* Storyboards */,
 				0A4971F52BF612CB007D3450 /* CustomAlert.swift */,
+				0AF9F0782CB96239001E60D7 /* LayerAnimator.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -539,6 +542,7 @@
 				0A5650652BF0DFF900231B71 /* SliderGame.swift in Sources */,
 				0A355B5D2C2D8A79008BA90B /* Constants.swift in Sources */,
 				0A692B382C60C35F00D1E144 /* HomeAnimationView.swift in Sources */,
+				0AF9F0792CB96239001E60D7 /* LayerAnimator.swift in Sources */,
 				0ADC70872BF4E24A005F8D76 /* HomeVC.swift in Sources */,
 				0AB41A672BEE3A9C00BDDAD0 /* SliderGameVC.swift in Sources */,
 				0A9C8C4F2C26DAFE003B0EFC /* Sound.swift in Sources */,
