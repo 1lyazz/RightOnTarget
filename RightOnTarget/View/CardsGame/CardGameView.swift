@@ -32,23 +32,8 @@ class CardGameView: UIView {
         return button
     }()
     
-    let nameTextField: UITextField = {
-        let textField = UITextField()
-        textField.layer.cornerRadius = 15
-        textField.backgroundColor = .white
-        textField.tintColor = .red
-        
-        textField.layer.shadowOpacity = 0.5
-        textField.layer.shadowOffset = .zero
-        textField.layer.shadowRadius = 4
-        
-        textField.attributedPlaceholder = NSAttributedString(string: "Enter your name", attributes: [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 1, green: 0.8496571183, blue: 0.9784039855, alpha: 1)])
-        textField.textAlignment = .center
-        textField.font = UIFont.boldSystemFont(ofSize: 20)
-        textField.textColor = .red
-        
-        textField.keyboardType = .asciiCapable
-        
+    let nameTextField: CustomTextField = {
+        let textField = CustomTextField()
         return textField
     }()
     

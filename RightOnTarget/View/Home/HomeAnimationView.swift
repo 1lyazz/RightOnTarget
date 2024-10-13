@@ -71,16 +71,18 @@ final class HomeAnimationView: UIView {
     }
     
     func startAnimation() {
-        UIView.animate(withDuration: 3, delay: 0, options: [.repeat, .autoreverse], animations: {
-            self.appLogo.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
-            self.appLogoLight.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
-            self.dartBoard.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
-            self.leftCatBottom.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-            self.leftCatVers.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
-            self.leftCatTop.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
-            self.rightCatBottom.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
-            self.rightCatTop.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-        }, completion: nil)
+        let animations = [
+            AnimationLayer(layer: appLogo.layer, scaleX: 0.9, scaleY: 0.9),
+            AnimationLayer(layer: appLogoLight.layer, scaleX: 1.1, scaleY: 1.1),
+            AnimationLayer(layer: dartBoard.layer, scaleX: 1.1, scaleY: 1.1),
+            AnimationLayer(layer: leftCatBottom.layer, scaleX: 1.2, scaleY: 1.2),
+            AnimationLayer(layer: leftCatVers.layer, scaleX: 0.9, scaleY: 0.9),
+            AnimationLayer(layer: leftCatTop.layer, scaleX: 1.1, scaleY: 1.1),
+            AnimationLayer(layer: rightCatBottom.layer, scaleX: 0.9, scaleY: 0.9),
+            AnimationLayer(layer: rightCatTop.layer, scaleX: 1.2, scaleY: 1.2)
+        ]
+
+        LayerAnimator.animateLayers(layers: animations, duration: 3)
     }
 }
 

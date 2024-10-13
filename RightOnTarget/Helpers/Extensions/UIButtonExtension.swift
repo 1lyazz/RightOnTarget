@@ -39,4 +39,13 @@ extension UIButton {
         layer.shadowRadius = 4.0
         layer.masksToBounds = false
     }
+
+    override open func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        let minimumHitArea = CGSize(width: 100, height: 100)
+        let buttonBounds = bounds
+        let widthToAdd = max(minimumHitArea.width - buttonBounds.width, 0)
+        let heightToAdd = max(minimumHitArea.height - buttonBounds.height, 0)
+        let extendedBounds = buttonBounds.insetBy(dx: -widthToAdd / 2, dy: -heightToAdd / 2)
+        return extendedBounds.contains(point) ? self : nil
+    }
 }
