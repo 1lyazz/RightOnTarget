@@ -59,6 +59,7 @@
 		0AF0305E2BFCF54A00BCCED8 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF0305D2BFCF54A00BCCED8 /* UIButtonExtension.swift */; };
 		0AF030622BFD06BB00BCCED8 /* UIVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF030612BFD06BB00BCCED8 /* UIVCExtension.swift */; };
 		0AF9F0792CB96239001E60D7 /* LayerAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9F0782CB96239001E60D7 /* LayerAnimator.swift */; };
+		0AF9F07D2CBBC2C0001E60D7 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9F07C2CBBC2BF001E60D7 /* CustomTextField.swift */; };
 		8F788D121E5876BC07089F8D /* Pods_RightOnTarget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4D6E09E8B455CCB79B1C26 /* Pods_RightOnTarget.framework */; };
 /* End PBXBuildFile section */
 
@@ -129,6 +130,7 @@
 		0AF0305D2BFCF54A00BCCED8 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		0AF030612BFD06BB00BCCED8 /* UIVCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIVCExtension.swift; sourceTree = "<group>"; };
 		0AF9F0782CB96239001E60D7 /* LayerAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerAnimator.swift; sourceTree = "<group>"; };
+		0AF9F07C2CBBC2BF001E60D7 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		3E4D6E09E8B455CCB79B1C26 /* Pods_RightOnTarget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RightOnTarget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4964BD305B503B6483682811 /* Pods-RightOnTarget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RightOnTarget.release.xcconfig"; path = "Target Support Files/Pods-RightOnTarget/Pods-RightOnTarget.release.xcconfig"; sourceTree = "<group>"; };
 		93D05897E1177B3C94390DCA /* Pods-RightOnTarget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RightOnTarget.debug.xcconfig"; path = "Target Support Files/Pods-RightOnTarget/Pods-RightOnTarget.debug.xcconfig"; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				0A692B2D2C5FE73100D1E144 /* CardGameView.swift */,
 				0A11955C2C1EDF4200AB7B4D /* Cards.swift */,
 				0A11955B2C1EDF3D00AB7B4D /* Shapes.swift */,
+				0AF9F07C2CBBC2BF001E60D7 /* CustomTextField.swift */,
 			);
 			path = CardsGame;
 			sourceTree = "<group>";
@@ -538,6 +541,7 @@
 				0A11955D2C1EDF6800AB7B4D /* Cards.swift in Sources */,
 				0A11956A2C1EF79900AB7B4D /* CardViewFactory.swift in Sources */,
 				0A1195672C1EF58500AB7B4D /* CardGame.swift in Sources */,
+				0AF9F07D2CBBC2C0001E60D7 /* CustomTextField.swift in Sources */,
 				0A8859BA2BF8D33D00B0D152 /* CardsGameVC.swift in Sources */,
 				0A5650652BF0DFF900231B71 /* SliderGame.swift in Sources */,
 				0A355B5D2C2D8A79008BA90B /* Constants.swift in Sources */,
